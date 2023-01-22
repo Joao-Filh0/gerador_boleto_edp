@@ -1,10 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gerador_boleto_edp/src/features/bankslip/presentation/pages/bank_slip_pdf_page/bank_slip_pdf_page.dart';
+import 'package:gerador_boleto_edp/src/features/bankslip/presentation/manager/bank_slip_pdf_page.dart';
 import 'package:printing/printing.dart';
 
 main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: PdfApp(),
   ));
 }
@@ -20,7 +20,6 @@ class _PdfAppState extends State<PdfApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("PDF")),
       body: PdfPreview(
         maxPageWidth: 700,
         build: (format) => BankSlipPdfPage().run(format),
