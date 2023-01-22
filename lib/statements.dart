@@ -1,6 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:gerador_boleto_edp/src/features/bankslip/presentation/widgets/bank_slip_widgets/bank_slip_widget.dart';
 import 'package:intl/intl.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -39,7 +40,7 @@ Future<Uint8List> generateInvoice(
     customerName: 'Abraham Swearegin',
     customerAddress: '54 rue de Rivoli\n75001 Paris, France',
     paymentInfo:
-    '4509 Wiseman Street\nKnoxville, Tennessee(TN), 37929\n865-372-0425',
+        '4509 Wiseman Street\nKnoxville, Tennessee(TN), 37929\n865-372-0425',
     tax: .15,
     baseColor: PdfColors.teal,
     accentColor: PdfColors.blueGrey900,
@@ -88,6 +89,7 @@ class Invoice {
   Future<Uint8List> buildPdf(PdfPageFormat pageFormat) async {
     // Create a PDF document.
     final doc = pw.Document();
+    final bankSlip = BankSlipWidget();
 
     _logo = await rootBundle.loadString('assets/logo.svg');
     _bgShape = await rootBundle.loadString('assets/invoice.svg');
@@ -102,15 +104,23 @@ class Invoice {
           await PdfGoogleFonts.robotoItalic(),
         ),
         header: _buildHeader,
-        footer: _buildFooter,
         build: (context) => [
-          pw.Container(width : 200,height: 200,child: pw.BarcodeWidget(data:  "www.google.com", barcode:pw.Barcode.qrCode())),
-          _contentHeader(context),
-          _contentTable(context),
-          pw.SizedBox(height: 20),
-          _contentFooter(context),
-          pw.SizedBox(height: 20),
-          _termsAndConditions(context),
+          pw.SizedBox(height: 100),
+          pw.Row(children: [
+            bankSlip.inputDate(),
+            bankSlip.inputDate(),
+            bankSlip.inputDate(isShowVertical: false)
+          ])
+
+          // bankSlip.boxLayout(
+          //     title: pw.Text('OLa Joao alves'),
+          //     body: pw.Container(color: PdfColors.pink)),
+          // _contentHeader(context),
+          // _contentTable(context),
+          // pw.SizedBox(height: 20),
+          // _contentFooter(context),
+          // pw.SizedBox(height: 20),
+          // _termsAndConditions(context),
         ],
       ),
     );
@@ -122,7 +132,6 @@ class Invoice {
   pw.Widget _buildHeader(pw.Context context) {
     return pw.Column(
       children: [
-
         pw.Row(
           crossAxisAlignment: pw.CrossAxisAlignment.start,
           children: [
@@ -145,7 +154,7 @@ class Invoice {
                   pw.Container(
                     decoration: pw.BoxDecoration(
                       borderRadius:
-                      const pw.BorderRadius.all(pw.Radius.circular(2)),
+                          const pw.BorderRadius.all(pw.Radius.circular(2)),
                       color: accentColor,
                     ),
                     padding: const pw.EdgeInsets.only(
@@ -180,7 +189,7 @@ class Invoice {
                     padding: const pw.EdgeInsets.only(bottom: 8, left: 30),
                     height: 72,
                     child:
-                    _logo != null ? pw.SvgImage(svg: _logo!) : pw.PdfLogo(),
+                        _logo != null ? pw.SvgImage(svg: _logo!) : pw.PdfLogo(),
                   ),
                   // pw.Container(
                   //   color: baseColor,
@@ -203,7 +212,7 @@ class Invoice {
       children: [
         pw.Container(
           height: 20,
-          width: 100,
+          width: 20,
           child: pw.BarcodeWidget(
             barcode: pw.Barcode.pdf417(),
             data: 'Invoice# $invoiceNumber',
@@ -224,17 +233,12 @@ class Invoice {
   pw.PageTheme _buildTheme(
       PdfPageFormat pageFormat, pw.Font base, pw.Font bold, pw.Font italic) {
     return pw.PageTheme(
-      pageFormat: pageFormat,
-      theme: pw.ThemeData.withFont(
-        base: base,
-        bold: bold,
-        italic: italic,
-      ),
-      buildBackground: (context) => pw.FullPage(
-        ignoreMargins: true,
-        child: pw.SvgImage(svg: _bgShape!),
-      ),
-    );
+        pageFormat: pageFormat,
+        theme: pw.ThemeData.withFont(
+          base: base,
+          bold: bold,
+          italic: italic,
+        ));
   }
 
   pw.Widget _contentHeader(pw.Context context) {
@@ -283,20 +287,20 @@ class Invoice {
                             fontSize: 12,
                           ),
                           children: [
-                            const pw.TextSpan(
-                              text: '\n',
-                              style: pw.TextStyle(
-                                fontSize: 5,
-                              ),
-                            ),
-                            pw.TextSpan(
-                              text: customerAddress,
-                              style: pw.TextStyle(
-                                fontWeight: pw.FontWeight.normal,
-                                fontSize: 10,
-                              ),
-                            ),
-                          ])),
+                        const pw.TextSpan(
+                          text: '\n',
+                          style: pw.TextStyle(
+                            fontSize: 5,
+                          ),
+                        ),
+                        pw.TextSpan(
+                          text: customerAddress,
+                          style: pw.TextStyle(
+                            fontWeight: pw.FontWeight.normal,
+                            fontSize: 10,
+                          ),
+                        ),
+                      ])),
                 ),
               ),
             ],
@@ -476,13 +480,13 @@ class Invoice {
       ),
       headers: List<String>.generate(
         tableHeaders.length,
-            (col) => tableHeaders[col],
+        (col) => tableHeaders[col],
       ),
       data: List<List<String>>.generate(
         products.length,
-            (row) => List<String>.generate(
+        (row) => List<String>.generate(
           tableHeaders.length,
-              (col) => products[row].getIndex(col),
+          (col) => products[row].getIndex(col),
         ),
       ),
     );
@@ -500,16 +504,17 @@ String _formatDate(DateTime date) {
 
 class Product {
   const Product(
-      this.sku,
-      this.productName,
-      this.price,
-      this.quantity,
-      );
+    this.sku,
+    this.productName,
+    this.price,
+    this.quantity,
+  );
 
   final String sku;
   final String productName;
   final double price;
   final int quantity;
+
   double get total => price * quantity;
 
   String getIndex(int index) {

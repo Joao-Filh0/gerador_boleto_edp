@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gerador_boleto_edp/statements.dart';
+import 'package:gerador_boleto_edp/src/features/bankslip/presentation/pages/bank_slip_pdf_page/bank_slip_pdf_page.dart';
 import 'package:printing/printing.dart';
 
-main(){
-  runApp(MaterialApp(home: PdfApp(),));
+main() {
+  runApp(MaterialApp(
+    home: PdfApp(),
+  ));
 }
-
 
 class PdfApp extends StatefulWidget {
   const PdfApp({Key? key}) : super(key: key);
@@ -22,8 +23,7 @@ class _PdfAppState extends State<PdfApp> {
       appBar: AppBar(title: Text("PDF")),
       body: PdfPreview(
         maxPageWidth: 700,
-        build: (format) => generateInvoice(format,CustomData()),
-
+        build: (format) => BankSlipPdfPage().run(format),
       ),
     );
   }
