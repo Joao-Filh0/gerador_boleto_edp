@@ -22,7 +22,7 @@ class BankSlipColumnHeader {
               title: 'EDP Sao Paulo Distribuicao de Energia B. A',
               description: 'EDP Sao Paulo Distribuicao de Energia B. A',
             ),
-            width: 130,
+            width: 140,
           ),
           pw.SizedBox(
             width: 30,

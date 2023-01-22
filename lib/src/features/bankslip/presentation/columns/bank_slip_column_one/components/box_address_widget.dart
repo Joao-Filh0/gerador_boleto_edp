@@ -9,7 +9,7 @@ class BoxAddressWidget {
       title:
           pw.Center(child: bankSlip.pdfText('Cliente / Endereço de Entrega')),
       body: pw.Padding(
-        padding: const pw.EdgeInsets.only(left: 10.0),
+        padding: const pw.EdgeInsets.only(top : 5.0,left: 10.0),
         child: pw.SizedBox(
           height: 10,
           child: pw.Column(
