@@ -18,7 +18,7 @@ class _PdfText {
       case PdfTextConstSizes.large:
         return 10.0;
       case PdfTextConstSizes.medium:
-        return 7.0;
+        return 8.0;
       case PdfTextConstSizes.small:
         return 5.0;
     }
