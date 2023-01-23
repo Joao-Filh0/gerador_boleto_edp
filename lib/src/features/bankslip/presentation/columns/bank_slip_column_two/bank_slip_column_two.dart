@@ -19,11 +19,14 @@ class BankSlipColumnTwo {
                 size: PdfTextConstSizes.medium)),
         body: pw.Padding(
           padding: const pw.EdgeInsets.only(top: 2.0),
-          child: pw.Column(children: [
-            pw.Row(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-              pw.Column(children: [
+          child: pw.Column(
+              children: [
+            pw.Row(crossAxisAlignment: pw.CrossAxisAlignment.start,
+                children: [
+              pw.Column(
+                  children: [
                 pw.Padding(
-                  padding: const pw.EdgeInsets.only(left: 5.0),
+                  padding: const pw.EdgeInsets.only(left: 5.0,bottom: 10),
                   child: bankSlip.pdfText(
                     'Autoleitura sabdkakadkadhbfdkufdfsiufffsafrsffgdfggdddfdgdfgddfgddf\n\n'
                     'ddfgdffgdfgdfgdfgdfgdfgdfgdfgdfdfdvsffffsfsfdgddfdffgdfgdfdfbdfdfsffgff\n\n'
