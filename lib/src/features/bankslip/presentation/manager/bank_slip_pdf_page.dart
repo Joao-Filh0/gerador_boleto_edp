@@ -35,8 +35,6 @@ class BankSlipPdfPage {
   Future<Uint8List> _buildPdf(PdfPageFormat pageFormat) async {
     final doc = pw.Document();
     final bankSlip = BankSlipWidget();
-    final logo = await rootBundle.loadString('assets/logo1.svg');
-
     final facebook = await rootBundle.loadString('assets/facebook.svg');
     final instagram = await rootBundle.loadString('assets/instagram.svg');
     final twitter = await rootBundle.loadString('assets/twitte.svg');
@@ -61,7 +59,7 @@ class BankSlipPdfPage {
         mainAxisAlignment: pw.MainAxisAlignment.start,
         crossAxisAlignment: pw.CrossAxisAlignment.center,
         build: (context) => [
-          BankSlipColumnHeader.init(bankSlip, logo: logo),
+          BankSlipColumnHeader.init(bankSlip),
           BankSlipColumnOne.init(bankSlip),
           BankSlipColumnTwo.init(bankSlip,
               logos: SocialMediaWidgetParams(
@@ -76,11 +74,24 @@ class BankSlipPdfPage {
                 imageThree: imageThree,
               ),
               dateImage: dateImage),
-          BankSlipColumnThree.init(bankSlip, image: logo),
-          BankSlipColumnFour.init(bankSlip),
-          BankSlipColumnFive.init(bankSlip),
+          BankSlipColumnThree.init(bankSlip),
+          BankSlipColumnFour.init(
+            bankSlip,
+            dateImage: dateImage,
+          ),
+          BankSlipColumnFive.init(
+            bankSlip,
+            column1: List<String>.generate(7, (index) => '11/22'),
+            column2: List<String>.generate(7, (index) => '187'),
+            column3: List<String>.generate(7, (index) => 'R\$383,32'),
+            column4: List<String>.generate(7, (index) => '11/22'),
+            column5: List<String>.generate(7, (index) => '152'),
+            column6: List<String>.generate(7, (index) => 'R\$423,12'),
+          ),
           BankSlipColumnSix.init(bankSlip),
           BankSlipColumnSeven.init(bankSlip),
+          pw.SizedBox(height: 30.0),
+          BankSlipColumnHeader.init(bankSlip),
         ],
       ),
     );

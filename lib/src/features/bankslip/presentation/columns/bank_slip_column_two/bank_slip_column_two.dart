@@ -12,25 +12,23 @@ class BankSlipColumnTwo {
       required String dateImage}) {
     return bankSlip.boxLayout(
         width: double.infinity,
-        height: 105.0,
+        height: 120.0,
         color: BoxLayoutTitleColor.secondary,
         title: pw.Center(
             child: bankSlip.pdfText('Autoleitura',
                 size: PdfTextConstSizes.medium)),
         body: pw.Padding(
           padding: const pw.EdgeInsets.only(top: 2.0),
-          child: pw.Column(
-              children: [
-            pw.Row(crossAxisAlignment: pw.CrossAxisAlignment.start,
-                children: [
-              pw.Column(
-                  children: [
+          child: pw.Column(children: [
+            pw.Row(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+              pw.Column(children: [
                 pw.Padding(
-                  padding: const pw.EdgeInsets.only(left: 5.0,bottom: 10),
+                  padding: const pw.EdgeInsets.only(left: 5.0, bottom: 10),
                   child: bankSlip.pdfText(
-                    'Autoleitura sabdkakadkadhbfdkufdfsiufffsafrsffgdfggdddfdgdfgddfgddf\n\n'
-                    'ddfgdffgdfgdfgdfgdfgdfgdfgdfgdfdfdvsffffsfsfdgddfdffgdfgdfdfbdfdfsffgff\n\n'
-                    'fdfgdfbdsifdsbdsfidsbdsfghfjgyjghjtyjtyjtyytytrtyrtytrtyrtyrth\n\n',
+                    'Informe no Atendimento EDP. Antes, marque as Posi-\n\n'
+                    'çoes dos ponteiros nos relógios, da direita para a es-\n\n'
+                    'querda, ou anote os números registrados nos quadros\n\n\n'
+                    'Lembre-se de anotar a datade leitura.',
                   ),
                 ),
                 InputDateWidget.init(bankSlip, dateImage: dateImage),

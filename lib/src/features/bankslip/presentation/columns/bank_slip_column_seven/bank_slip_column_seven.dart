@@ -6,12 +6,21 @@ class BankSlipColumnSeven {
   static pw.Widget init(BankSlipWidget bankSlip) {
     return bankSlip.boxLayout(
       width: double.infinity,
-      height: 40.0,
+      height: 60.0,
       color: BoxLayoutTitleColor.secondary,
       title: pw.Center(
           child: bankSlip.pdfText('Informacoes Importantes',
               size: PdfTextConstSizes.medium)),
-      body: pw.Column(children: []),
+      body: pw.Padding(
+          padding: const pw.EdgeInsets.only(top: 10.0, left: 10.0),
+          child: bankSlip.pdfText(
+              'Informaçoes Suplementares, Condiçoes gerais de fornecimento, Tarifas, '
+              'Contribuiçao de Iluminaça,Seviço Prestados,Impostos e apuraçao dos indicadores de continuidade '
+              'e limites aplicáveis se encontram a disposiçao para  consulta através do telefone 0800 721 0123, '
+              'em nossas Lojas Comerciais e no site da EDP: www.edponline.com.br.\n\n'
+              'O atraso no pagamento da fatura indicará multa de 2% juros moratórios de 1% ao mes e atualizaçao monetária '
+              'que serao incluídos na fatura do próximo mes.',
+              fontWeight: pw.FontWeight.bold)),
     );
   }
 }

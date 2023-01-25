@@ -1,4 +1,3 @@
-import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 
 import '../../../widgets/bank_slip_widgets/bank_slip_widget.dart';
@@ -24,17 +23,8 @@ class ClocksRowWidget {
           children: [
             bankSlip.image(image, size: 40.0),
             pw.Padding(
-              padding: const pw.EdgeInsets.only(top : 5.0),
-              child: pw.Container(
-                  height: 10,
-                  width: 10,
-                  decoration: pw.BoxDecoration(
-                    border: pw.Border.all(
-                      color: PdfColors.black,
-                      width: 0.5,
-                    ),
-                  ))
-            )
+                padding: const pw.EdgeInsets.only(top: 5.0),
+                child: bankSlip.checkBox())
           ]);
     }
 
