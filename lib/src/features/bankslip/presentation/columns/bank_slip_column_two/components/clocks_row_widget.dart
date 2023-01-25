@@ -23,20 +23,23 @@ class ClocksRowWidget {
           mainAxisAlignment: pw.MainAxisAlignment.center,
           children: [
             bankSlip.image(image, size: 40.0),
-            pw.Container(
-                height: 10,
-                width: 10,
-                decoration: pw.BoxDecoration(
-                  border: pw.Border.all(
-                    color: PdfColors.black,
-                    width: 0.5,
-                  ),
-                ))
+            pw.Padding(
+              padding: const pw.EdgeInsets.only(top : 5.0),
+              child: pw.Container(
+                  height: 10,
+                  width: 10,
+                  decoration: pw.BoxDecoration(
+                    border: pw.Border.all(
+                      color: PdfColors.black,
+                      width: 0.5,
+                    ),
+                  ))
+            )
           ]);
     }
 
     return pw.Padding(
-        padding: const pw.EdgeInsets.only(left: 20.0, bottom: 11.0),
+        padding: const pw.EdgeInsets.only(left: 20.0, bottom: 10.0),
         child: pw.Row(children: [
           columnClock(params.imageOne),
           columnClock(params.imageTwo),

@@ -11,7 +11,7 @@ class BankSlipColumnHeader {
             pw.Row(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
           pw.Column(
             mainAxisAlignment: pw.MainAxisAlignment.center,
-            children: [pw.SizedBox(height: 7.0), bankSlip.image(logo)],
+            children: [pw.SizedBox(height: 8.0), bankSlip.image(logo)],
           ),
           pw.SizedBox(
             width: 10,
@@ -22,10 +22,10 @@ class BankSlipColumnHeader {
               title: 'EDP Sao Paulo Distribuicao de Energia B. A',
               description: 'EDP Sao Paulo Distribuicao de Energia B. A',
             ),
-            width: 140,
+            width: 180,
           ),
           pw.SizedBox(
-            width: 30,
+            width: 25,
           ),
           pw.SizedBox(
             child: HeaderInformation.init(bankSlip,

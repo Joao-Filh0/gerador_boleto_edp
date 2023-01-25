@@ -44,8 +44,9 @@ class BankSlipPdfPage {
     final linkedin = await rootBundle.loadString('assets/linkedin.svg');
 
     final imageOne = await rootBundle.loadString('assets/image_clock_1.svg');
-    final imageTwo = await rootBundle.loadString('assets/image_clock_1.svg');
-    final imageThree = await rootBundle.loadString('assets/image_clock_1.svg');
+    final imageTwo = await rootBundle.loadString('assets/image_clock_2.svg');
+    final imageThree = await rootBundle.loadString('assets/image_clock_3.svg');
+
     final dateImage = await rootBundle.loadString('assets/date_input.svg');
 
     // Add page to the PDF

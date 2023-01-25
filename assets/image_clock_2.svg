@@ -4,25 +4,26 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="550px"
 	 height="554.916px" viewBox="0 0 550 554.916" enable-background="new 0 0 550 554.916" xml:space="preserve">
 <g id="Layer_1">
-	<ellipse fill="#808080" stroke="#000000" stroke-width="5" stroke-miterlimit="10" cx="275" cy="301.938" rx="275" ry="252.979"/>
+	<ellipse fill="#FFFFFF" stroke="#000000" stroke-width="5" stroke-miterlimit="10" cx="275" cy="301.938" rx="275" ry="252.979"/>
 	
 		<ellipse fill="#FFFFFF" stroke="#000000" stroke-width="5" stroke-miterlimit="10" cx="280.893" cy="305.713" rx="184.384" ry="168.214"/>
 	<text transform="matrix(1.0933 0 0 1 255.959 123.5933)" font-family="'Myriad-Roman'" font-size="94.1657">0</text>
-	<text transform="matrix(1.7322 0 0 1 378.959 166.7495)" font-family="'Myriad-Roman'" font-size="81.7078">1</text>
-	<text transform="matrix(1.1024 0 0 1 465.2773 257.375)" font-family="'Myriad-Roman'" font-size="81.7078">2</text>
-	<text transform="matrix(1.7322 0 0 1 464.583 390.792)" font-family="'Myriad-Roman'" font-size="81.7078">3</text>
-	<text transform="matrix(1.7322 0 0 1 378.959 499.125)" font-family="'Myriad-Roman'" font-size="81.7078">4</text>
+	<text transform="matrix(1.7322 0 0 1 378.959 166.7495)" font-family="'Myriad-Roman'" font-size="81.7078">9</text>
+	<text transform="matrix(1.1024 0 0 1 465.2773 257.375)" font-family="'Myriad-Roman'" font-size="81.7078">8</text>
+	<text transform="matrix(1.7322 0 0 1 464.583 390.792)" font-family="'Myriad-Roman'" font-size="81.7078">7</text>
+	<text transform="matrix(1.7322 0 0 1 378.959 499.125)" font-family="'Myriad-Roman'" font-size="81.7078">6</text>
 	<text transform="matrix(1.7322 0 0 1 242 543.916)" font-family="'Myriad-Roman'" font-size="81.7078">5</text>
-	<text transform="matrix(1.7322 0 0 1 116.4595 516.834)" font-family="'Myriad-Roman'" font-size="81.7078">6</text>
-	<text transform="matrix(1.7322 0 0 1 19.5845 400.166)" font-family="'Myriad-Roman'" font-size="81.7078">7</text>
-	<text transform="matrix(1.7322 0 0 1 19.5845 261.625)" font-family="'Myriad-Roman'" font-size="81.7078">8</text>
-	<text transform="matrix(1.7322 0 0 1 103.9595 152.2495)" font-family="'Myriad-Roman'" font-size="81.7078">9</text>
+	<text transform="matrix(1.7322 0 0 1 116.4595 516.834)" font-family="'Myriad-Roman'" font-size="81.7078">4</text>
+	<text transform="matrix(1.7322 0 0 1 19.5845 400.166)" font-family="'Myriad-Roman'" font-size="81.7078">3</text>
+	<text transform="matrix(1.7322 0 0 1 19.5845 261.625)" font-family="'Myriad-Roman'" font-size="81.7078">2</text>
+	<text transform="matrix(1.7322 0 0 1 103.9595 155.3745)" font-family="'Myriad-Roman'" font-size="81.7078">1</text>
 	<g id="Layer_2">
 	</g>
 	<g id="Layer_3">
 	</g>
 </g>
 <g id="arrow">
+	<path fill="#858680" d="M635.125,37.083c-3.225,0-3.225,5,0,5S638.35,37.083,635.125,37.083z"/>
 	<g>
 		<g>
 			<path d="M146.053,46.95c39.236-21.017,84.89-29.088,129.015-30.015c43.598-0.916,89.408,5.419,128.879,20
