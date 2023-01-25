@@ -35,7 +35,7 @@ class BankSlipPdfPage {
   Future<Uint8List> _buildPdf(PdfPageFormat pageFormat) async {
     final doc = pw.Document();
     final bankSlip = BankSlipWidget();
-    final logo = await rootBundle.loadString('assets/logo.svg');
+    final logo = await rootBundle.loadString('assets/logo1.svg');
 
     final facebook = await rootBundle.loadString('assets/facebook.svg');
     final instagram = await rootBundle.loadString('assets/instagram.svg');
@@ -75,7 +75,7 @@ class BankSlipPdfPage {
                 imageThree: imageThree,
               ),
               dateImage: dateImage),
-          BankSlipColumnThree.init(bankSlip),
+          BankSlipColumnThree.init(bankSlip, image: logo),
           BankSlipColumnFour.init(bankSlip),
           BankSlipColumnFive.init(bankSlip),
           BankSlipColumnSix.init(bankSlip),
