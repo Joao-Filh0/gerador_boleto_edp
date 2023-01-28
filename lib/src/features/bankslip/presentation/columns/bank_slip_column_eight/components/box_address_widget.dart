@@ -14,10 +14,12 @@ class BoxAddressWidget {
           child: pw.Column(
               crossAxisAlignment: pw.CrossAxisAlignment.start,
               children: [
-                bankSlip.pdfText('Campo editavél'),
+                bankSlip.pdfText('Campo editavél',
+                    size: PdfTextConstSizes.small),
                 pw.Row(children: [
-                  bankSlip.pdfText('Rua : '),
-                  bankSlip.pdfText('Campo editavél  /  GUARULHOS - SP')
+                  bankSlip.pdfText('Rua : ', size: PdfTextConstSizes.small),
+                  bankSlip.pdfText('Campo editavél  /  GUARULHOS - SP',
+                      size: PdfTextConstSizes.small)
                 ]),
                 pw.Row(
                     crossAxisAlignment: pw.CrossAxisAlignment.start,
@@ -47,8 +49,9 @@ class BoxAddressWidget {
                                 size: PdfTextConstSizes.small),
                             bankSlip.pdfText('COD. FISCAL OPERAÇAO:  5258',
                                 size: PdfTextConstSizes.small),
-                            bankSlip
-                                .pdfText('ROTEIRO  DE LEITURA: B05GU1 1M00295')
+                            bankSlip.pdfText(
+                                'ROTEIRO  DE LEITURA: B05GU1 1M00295',
+                                size: PdfTextConstSizes.small)
                           ])),
                     ]),
               ]),

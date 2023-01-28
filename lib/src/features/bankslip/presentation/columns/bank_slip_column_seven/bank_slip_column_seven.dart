@@ -8,9 +8,7 @@ class BankSlipColumnSeven {
       width: double.infinity,
       height: 60.0,
       color: BoxLayoutTitleColor.secondary,
-      title: pw.Center(
-          child: bankSlip.pdfText('Informacoes Importantes',
-              size: PdfTextConstSizes.medium)),
+      title: 'Informacoes Importantes',
       body: pw.Padding(
           padding: const pw.EdgeInsets.only(top: 10.0, left: 10.0),
           child: bankSlip.pdfText(

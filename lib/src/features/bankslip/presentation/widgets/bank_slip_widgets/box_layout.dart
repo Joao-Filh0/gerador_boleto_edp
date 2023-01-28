@@ -4,7 +4,7 @@ enum BoxLayoutTitleColor { primary, secondary }
 
 class _BoxLayout {
   pw.Widget boxLayout(
-      {required pw.Widget title,
+      {required String title,
       required pw.Widget body,
       double height = 300,
       double width = 300,
@@ -17,7 +17,10 @@ class _BoxLayout {
             children: [
               pw.Container(
                 child: pw.Padding(
-                    padding: const pw.EdgeInsets.all(2.0), child: title),
+                    padding: const pw.EdgeInsets.all(2.0),
+                    child: pw.Center(
+                        child: _PdfText()
+                            .pdfText(title, size: PdfTextConstSizes.large))),
                 color: _getTitleColor(color),
               ),
               pw.Expanded(child: body)

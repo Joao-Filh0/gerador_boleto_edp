@@ -1,6 +1,6 @@
 part of 'bank_slip_widget.dart';
 
-enum PdfTextConstSizes { large, medium, small, big, extraBig }
+enum PdfTextConstSizes { large, medium, small, big, extraBig, tiny }
 
 enum PdfTextColor { primary, secondary, normal }
 
@@ -24,6 +24,8 @@ class _PdfText {
         return 8.0;
       case PdfTextConstSizes.small:
         return 7.0;
+      case PdfTextConstSizes.tiny:
+        return 3.0;
       case PdfTextConstSizes.extraBig:
         return 20.0;
       case PdfTextConstSizes.big:

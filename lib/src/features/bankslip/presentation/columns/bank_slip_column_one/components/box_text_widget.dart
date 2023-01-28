@@ -8,7 +8,7 @@ class BoxTextWidget {
     return pw.SizedBox(
         height: 28.0,
         child: bankSlip.boxLayout(
-            title: pw.Center(child: bankSlip.pdfText(text)),
+            title: text,
             body: pw.Center(child: bankSlip.pdfText(description))));
   }
 }

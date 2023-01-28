@@ -11,9 +11,7 @@ class BankSlipColumnFour {
       width: double.infinity,
       height: 90.0,
       color: BoxLayoutTitleColor.secondary,
-      title: pw.Center(
-          child: bankSlip.pdfText('Para Uso do correio',
-              size: PdfTextConstSizes.medium)),
+      title: 'Para Uso do correio',
       body: pw.Column(children: [
         pw.SizedBox(height: 1.0),
         RowInformationWidget.init(bankSlip, dateImage: dateImage),

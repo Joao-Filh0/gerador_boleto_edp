@@ -5,9 +5,7 @@ import '../../../widgets/bank_slip_widgets/bank_slip_widget.dart';
 class BoxDatesWidget {
   static pw.Widget init(BankSlipWidget bankSlip) {
     return bankSlip.boxLayout(
-        title: pw.Center(
-          child: bankSlip.pdfText('Datas'),
-        ),
+        title: 'Datas',
         body: pw.Padding(
             padding:
                 const pw.EdgeInsets.symmetric(horizontal: 0.0, vertical: 5.0),

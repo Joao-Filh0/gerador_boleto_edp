@@ -14,9 +14,7 @@ class BankSlipColumnTwo {
         width: double.infinity,
         height: 120.0,
         color: BoxLayoutTitleColor.secondary,
-        title: pw.Center(
-            child: bankSlip.pdfText('Autoleitura',
-                size: PdfTextConstSizes.medium)),
+        title: 'Autoleitura',
         body: pw.Padding(
           padding: const pw.EdgeInsets.only(top: 2.0),
           child: pw.Column(children: [

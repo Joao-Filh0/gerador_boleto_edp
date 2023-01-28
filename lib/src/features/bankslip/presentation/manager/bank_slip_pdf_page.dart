@@ -1,4 +1,5 @@
 import 'package:flutter/services.dart';
+import 'package:gerador_boleto_edp/src/features/bankslip/presentation/columns/bank_slip_column_eight/bank_slip_column_eight.dart';
 import 'package:gerador_boleto_edp/src/features/bankslip/presentation/columns/bank_slip_column_header/bank_slip_column_header.dart';
 import 'package:gerador_boleto_edp/src/features/bankslip/presentation/columns/bank_slip_column_two/bank_slip_column_two.dart';
 import 'package:gerador_boleto_edp/src/features/bankslip/presentation/columns/bank_slip_column_two/components/clocks_row_widget.dart';
@@ -92,6 +93,7 @@ class BankSlipPdfPage {
           BankSlipColumnSeven.init(bankSlip),
           pw.SizedBox(height: 30.0),
           BankSlipColumnHeader.init(bankSlip),
+          BankSlipColumnEight.init(bankSlip),
         ],
       ),
     );

@@ -16,9 +16,7 @@ class BankSlipColumnFive {
     return bankSlip.boxLayout(
       width: double.infinity,
       height: 90.0,
-      title: pw.Center(
-          child: bankSlip.pdfText('Histórico de consumo (kWh)',
-              size: PdfTextConstSizes.medium)),
+      title: 'Histórico de consumo (kWh)',
       body: pw.Padding(
           padding: const pw.EdgeInsets.only(left: 20.0),
           child: pw.Row(
