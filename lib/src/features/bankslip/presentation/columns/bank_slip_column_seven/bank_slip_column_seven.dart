@@ -6,7 +6,7 @@ class BankSlipColumnSeven {
   static pw.Widget init(BankSlipWidget bankSlip) {
     return bankSlip.boxLayout(
       width: double.infinity,
-      height: 60.0,
+      height: 50.0,
       color: BoxLayoutTitleColor.secondary,
       title: 'Informacoes Importantes',
       body: pw.Padding(

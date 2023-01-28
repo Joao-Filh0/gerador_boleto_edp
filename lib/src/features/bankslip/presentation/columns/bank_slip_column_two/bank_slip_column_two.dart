@@ -12,7 +12,7 @@ class BankSlipColumnTwo {
       required String dateImage}) {
     return bankSlip.boxLayout(
         width: double.infinity,
-        height: 120.0,
+        height: 130.0,
         color: BoxLayoutTitleColor.secondary,
         title: 'Autoleitura',
         body: pw.Padding(

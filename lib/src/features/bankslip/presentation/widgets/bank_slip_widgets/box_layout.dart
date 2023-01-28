@@ -30,9 +30,9 @@ class _BoxLayout {
   PdfColor _getTitleColor(BoxLayoutTitleColor color) {
     switch (color) {
       case BoxLayoutTitleColor.primary:
-        return PdfColors.blue;
+        return PdfColors.blue400;
       case BoxLayoutTitleColor.secondary:
-        return PdfColors.grey;
+        return PdfColors.grey400;
     }
   }
 }

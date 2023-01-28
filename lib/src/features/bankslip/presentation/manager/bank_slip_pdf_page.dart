@@ -7,12 +7,18 @@ import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 
+import '../columns/bank_slip_column_eleven/bank_slip_column_eleven.dart';
 import '../columns/bank_slip_column_five/bank_slip_column_five.dart';
 import '../columns/bank_slip_column_four/bank_slip_column_four.dart';
+import '../columns/bank_slip_column_fourteen/bank_slip_column_fourteen.dart';
+import '../columns/bank_slip_column_nine/bank_slip_column_nine.dart';
 import '../columns/bank_slip_column_one/bank_slip_column_one.dart';
 import '../columns/bank_slip_column_seven/bank_slip_column_seven.dart';
 import '../columns/bank_slip_column_six/bank_slip_column_six.dart';
+import '../columns/bank_slip_column_ten/bank_slip_column_ten.dart';
+import '../columns/bank_slip_column_thirteen/bank_slip_column_thirteen.dart';
 import '../columns/bank_slip_column_three/bank_slip_column_three.dart';
+import '../columns/bank_slip_column_twelve/bank_slip_column_twelve.dart';
 import '../columns/bank_slip_column_two/components/social_media_widget.dart';
 import '../widgets/bank_slip_widgets/bank_slip_widget.dart';
 
@@ -94,6 +100,12 @@ class BankSlipPdfPage {
           pw.SizedBox(height: 30.0),
           BankSlipColumnHeader.init(bankSlip),
           BankSlipColumnEight.init(bankSlip),
+          BankSlipColumnNine.init(bankSlip),
+          BankSlipColumnTen.init(bankSlip),
+          BankSlipColumnEleven.init(bankSlip),
+          BankSlipColumnTwelve.init(bankSlip),
+          BankSlipColumnThirteen.init(bankSlip),
+          BankSlipColumnFourteen.init(bankSlip),
         ],
       ),
     );
