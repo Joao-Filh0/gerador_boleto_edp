@@ -4,6 +4,7 @@ import 'dart:math' as math;
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 
+part 'bank_slip_title_widget.dart';
 part 'box_layout.dart';
 part 'check_box.dart';
 part 'clock_check_box.dart';
@@ -13,4 +14,11 @@ part 'input_date.dart';
 part 'pdf_text.dart';
 
 class BankSlipWidget extends _BoxLayout
-    with _InputDate, _ClockCheckBox, _PdfText, _Image, _EdpLogo, _CheckBox {}
+    with
+        _InputDate,
+        _ClockCheckBox,
+        _PdfText,
+        _Image,
+        _EdpLogo,
+        _CheckBox,
+        _Title {}

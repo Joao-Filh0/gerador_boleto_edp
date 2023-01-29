@@ -8,7 +8,7 @@ class ConsumerPlace {
     return bankSlip.boxLayout(
         title: 'Local de Consumo',
         body: pw.Padding(
-            padding: pw.EdgeInsets.all(5.0),
+            padding: const pw.EdgeInsets.all(5.0),
             child: pw.Column(
                 crossAxisAlignment: pw.CrossAxisAlignment.start,
                 mainAxisAlignment: pw.MainAxisAlignment.start,

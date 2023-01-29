@@ -7,7 +7,7 @@ class BankSlipColumnEleven {
   static pw.Widget init(BankSlipWidget bankSlip) {
     return pw.Container(
         color: PdfColors.grey200,
-        height: 80.0,
+        height: 60.0,
         child: pw.Row(children: [
           pw.Expanded(
             flex: 3,

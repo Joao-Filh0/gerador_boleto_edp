@@ -53,6 +53,7 @@ class BankSlipPdfPage {
     final imageThree = await rootBundle.loadString('assets/image_clock_3.svg');
 
     final dateImage = await rootBundle.loadString('assets/date_input.svg');
+    final pix = await rootBundle.loadString('assets/pix.svg');
 
     // Add page to the PDF
     doc.addPage(
@@ -105,7 +106,7 @@ class BankSlipPdfPage {
           BankSlipColumnEleven.init(bankSlip),
           BankSlipColumnTwelve.init(bankSlip),
           BankSlipColumnThirteen.init(bankSlip),
-          BankSlipColumnFourteen.init(bankSlip),
+          BankSlipColumnFourteen.init(bankSlip, image: pix),
         ],
       ),
     );
